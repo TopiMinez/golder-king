@@ -51,7 +51,7 @@ for (var i = 0, k = 0, l = gdjs.MainCode.GDHMObjects1.length;i<l;++i) {
 }
 gdjs.MainCode.GDHMObjects1.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/hmstr/", 719, 1000, 0, 100, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/hmstr/", gdjs.evtTools.window.getGameResolutionWidth(runtimeScene), gdjs.evtTools.window.getGameResolutionHeight(runtimeScene), 0, 0, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
