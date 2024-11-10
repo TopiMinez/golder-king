@@ -18,7 +18,47 @@ gdjs.MainCode.GDMarksObjects1= [];
 gdjs.MainCode.GDMarksObjects2= [];
 
 
+gdjs.MainCode.asyncCallback12531668 = function (runtimeScene, asyncObjectsList) {
+asyncObjectsList.restoreLocalVariablesContainers(gdjs.MainCode.localVariables);
+{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(0);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("Save", "Close", 0);
+}gdjs.MainCode.localVariables.length = 0;
+}
 gdjs.MainCode.eventsList0 = function(runtimeScene) {
+
+{
+
+
+{
+{
+const asyncObjectsList = new gdjs.LongLivedObjectsList();
+asyncObjectsList.backupLocalVariablesContainers(gdjs.MainCode.localVariables);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.MainCode.asyncCallback12531668(runtimeScene, asyncObjectsList)));
+}
+}
+
+}
+
+
+};gdjs.MainCode.eventsList1 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 1;
+if (isConditionTrue_0) {
+{gdjs.evtsExt__Iframe__Delete.func(runtimeScene, "1", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}
+{ //Subevents
+gdjs.MainCode.eventsList0(runtimeScene);} //End of subevents
+}
+
+}
+
+
+};gdjs.MainCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -52,7 +92,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(9370628);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12523252);
 }
 }
 if (isConditionTrue_0) {
@@ -79,9 +119,9 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 2;
 if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "a");
-}{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "MON", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
+{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "MON", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "Close", runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0));
+}{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "a");
 }}
 
 }
@@ -131,6 +171,27 @@ if (isConditionTrue_0) {
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("Chips"), gdjs.MainCode.GDChipsObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.MainCode.GDChipsObjects1.length;i<l;++i) {
+    if ( gdjs.MainCode.GDChipsObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.MainCode.GDChipsObjects1[k] = gdjs.MainCode.GDChipsObjects1[i];
+        ++k;
+    }
+}
+gdjs.MainCode.GDChipsObjects1.length = k;
+if (isConditionTrue_0) {
+{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/golder-king-chips/", gdjs.evtTools.window.getGameResolutionWidth(runtimeScene), gdjs.evtTools.window.getGameResolutionHeight(runtimeScene), 0, 0, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}}
+
+}
+
+
+{
+
 gdjs.copyArray(runtimeScene.getObjects("HM"), gdjs.MainCode.GDHMObjects1);
 
 let isConditionTrue_0 = false;
@@ -144,7 +205,7 @@ for (var i = 0, k = 0, l = gdjs.MainCode.GDHMObjects1.length;i<l;++i) {
 }
 gdjs.MainCode.GDHMObjects1.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/hmstr/", gdjs.evtTools.window.getGameResolutionWidth(runtimeScene), gdjs.evtTools.window.getGameResolutionHeight(runtimeScene), 0, 0, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/golder-king-clicker/", gdjs.evtTools.window.getGameResolutionWidth(runtimeScene), gdjs.evtTools.window.getGameResolutionHeight(runtimeScene), 0, 0, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -153,15 +214,7 @@ if (isConditionTrue_0) {
 {
 
 
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 1;
-if (isConditionTrue_0) {
-{gdjs.evtsExt__Iframe__Delete.func(runtimeScene, "1", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtTools.storage.writeNumberInJSONFile("Save", "Close", 0);
-}{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(0);
-}}
-
+gdjs.MainCode.eventsList1(runtimeScene);
 }
 
 
@@ -187,7 +240,7 @@ gdjs.MainCode.GDGolder_9595KingObjects2.length = 0;
 gdjs.MainCode.GDMarksObjects1.length = 0;
 gdjs.MainCode.GDMarksObjects2.length = 0;
 
-gdjs.MainCode.eventsList0(runtimeScene);
+gdjs.MainCode.eventsList2(runtimeScene);
 gdjs.MainCode.GDInfoObjects1.length = 0;
 gdjs.MainCode.GDInfoObjects2.length = 0;
 gdjs.MainCode.GDHMObjects1.length = 0;
