@@ -8,6 +8,8 @@ gdjs.MainCode.GDHMObjects1= [];
 gdjs.MainCode.GDHMObjects2= [];
 gdjs.MainCode.GDSettingsButtonObjects1= [];
 gdjs.MainCode.GDSettingsButtonObjects2= [];
+gdjs.MainCode.GDNewTextObjects1= [];
+gdjs.MainCode.GDNewTextObjects2= [];
 gdjs.MainCode.GDGolder_9595KingObjects1= [];
 gdjs.MainCode.GDGolder_9595KingObjects2= [];
 gdjs.MainCode.GDMarksObjects1= [];
@@ -25,7 +27,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10908276);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(11478028);
 }
 }
 if (isConditionTrue_0) {
@@ -171,6 +173,8 @@ gdjs.MainCode.GDHMObjects1.length = 0;
 gdjs.MainCode.GDHMObjects2.length = 0;
 gdjs.MainCode.GDSettingsButtonObjects1.length = 0;
 gdjs.MainCode.GDSettingsButtonObjects2.length = 0;
+gdjs.MainCode.GDNewTextObjects1.length = 0;
+gdjs.MainCode.GDNewTextObjects2.length = 0;
 gdjs.MainCode.GDGolder_9595KingObjects1.length = 0;
 gdjs.MainCode.GDGolder_9595KingObjects2.length = 0;
 gdjs.MainCode.GDMarksObjects1.length = 0;
@@ -185,6 +189,8 @@ gdjs.MainCode.GDHMObjects1.length = 0;
 gdjs.MainCode.GDHMObjects2.length = 0;
 gdjs.MainCode.GDSettingsButtonObjects1.length = 0;
 gdjs.MainCode.GDSettingsButtonObjects2.length = 0;
+gdjs.MainCode.GDNewTextObjects1.length = 0;
+gdjs.MainCode.GDNewTextObjects2.length = 0;
 gdjs.MainCode.GDGolder_9595KingObjects1.length = 0;
 gdjs.MainCode.GDGolder_9595KingObjects2.length = 0;
 gdjs.MainCode.GDMarksObjects1.length = 0;
