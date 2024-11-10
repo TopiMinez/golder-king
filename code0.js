@@ -10,7 +10,7 @@ gdjs.LoadCode.GDMarksObjects1= [];
 gdjs.LoadCode.GDMarksObjects2= [];
 
 
-gdjs.LoadCode.asyncCallback11800436 = function (runtimeScene, asyncObjectsList) {
+gdjs.LoadCode.asyncCallback11161172 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.LoadCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main", false);
 }{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -25,7 +25,7 @@ gdjs.LoadCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.LoadCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.LoadCode.asyncCallback11800436(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.LoadCode.asyncCallback11161172(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -63,7 +63,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 0;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(12213916);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(11162140);
 }
 }
 if (isConditionTrue_0) {

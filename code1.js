@@ -24,11 +24,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("BG"), gdjs.MainCode.GDBGObjects1);
-{for(var i = 0, len = gdjs.MainCode.GDBGObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDBGObjects1[i].play();
-}
-}{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "a");
+{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "a");
 }{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "MON", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "ID", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(1));
 }}
@@ -51,7 +47,7 @@ for (var i = 0, k = 0, l = gdjs.MainCode.GDHMObjects1.length;i<l;++i) {
 }
 gdjs.MainCode.GDHMObjects1.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/hmstr/", gdjs.evtTools.window.getGameResolutionWidth(runtimeScene), gdjs.evtTools.window.getGameResolutionHeight(runtimeScene), 0, 0, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/hmstr/", gdjs.evtTools.window.getGameResolutionWidth(runtimeScene), gdjs.evtTools.window.getGameResolutionHeight(runtimeScene), 0, 100, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -70,7 +66,6 @@ isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.storage.readNumberFromJSONFile("Save", "MON", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
-}{gdjs.evtsExt__Iframe__Delete.func(runtimeScene, "1", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -99,6 +94,7 @@ gdjs.copyArray(runtimeScene.getObjects("Golder_King"), gdjs.MainCode.GDGolder_95
 {for(var i = 0, len = gdjs.MainCode.GDGolder_9595KingObjects1.length ;i < len;++i) {
     gdjs.MainCode.GDGolder_9595KingObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(0).getAsString() + " МОН");
 }
+}{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "Close", runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0));
 }}
 
 }
@@ -120,6 +116,19 @@ for (var i = 0, k = 0, l = gdjs.MainCode.GDSettingsButtonObjects1.length;i<l;++i
 gdjs.MainCode.GDSettingsButtonObjects1.length = k;
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Shop", false);
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 1;
+if (isConditionTrue_0) {
+{gdjs.evtsExt__Iframe__Delete.func(runtimeScene, "1", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
