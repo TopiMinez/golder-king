@@ -22,11 +22,34 @@ gdjs.MainCode.eventsList0 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(10908276);
+}
+}
+if (isConditionTrue_0) {
+{runtimeScene.getGame().getVariables().getFromIndex(1).setNumber(gdjs.randomInRange(12481498, 124814980));
+}{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("Save", "IDs", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("Save", "ID", runtimeScene.getGame().getVariables().getFromIndex(1).getAsNumber());
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "a");
 }{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "MON", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "ID", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(1));
+}{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(0);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("Save", "Close", 0);
 }}
 
 }
@@ -47,7 +70,7 @@ for (var i = 0, k = 0, l = gdjs.MainCode.GDHMObjects1.length;i<l;++i) {
 }
 gdjs.MainCode.GDHMObjects1.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/hmstr/", gdjs.evtTools.window.getGameResolutionWidth(runtimeScene), gdjs.evtTools.window.getGameResolutionHeight(runtimeScene), 0, 100, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+{gdjs.evtsExt__Iframe__Create.func(runtimeScene, "1", "https://topiminez.github.io/hmstr/", gdjs.evtTools.window.getGameResolutionWidth(runtimeScene), gdjs.evtTools.window.getGameResolutionHeight(runtimeScene), 0, 0, false, false, "", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -76,10 +99,11 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 5;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "a") >= 2;
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "a");
 }{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "MON", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "Close", runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0));
 }}
 
 }
@@ -94,7 +118,6 @@ gdjs.copyArray(runtimeScene.getObjects("Golder_King"), gdjs.MainCode.GDGolder_95
 {for(var i = 0, len = gdjs.MainCode.GDGolder_9595KingObjects1.length ;i < len;++i) {
     gdjs.MainCode.GDGolder_9595KingObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(0).getAsString() + " МОН");
 }
-}{gdjs.evtTools.storage.readNumberFromJSONFile("Save", "Close", runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0));
 }}
 
 }
@@ -129,6 +152,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) == 1;
 if (isConditionTrue_0) {
 {gdjs.evtsExt__Iframe__Delete.func(runtimeScene, "1", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}{gdjs.evtTools.storage.writeNumberInJSONFile("Save", "Close", 0);
 }}
 
 }
